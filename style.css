@@ -1,0 +1,286 @@
+
+:root {
+    --pink-light: #fff0f5;
+    --pink: #f8c8dc;
+    --pink-dark: #d989b0;
+    --rose: #a74b75;
+    --text: #713e59;
+    --cream: #fffaf7;
+    --green: #a6b87b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--pink-light);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+    min-height: 100vh;
+}
+
+.app {
+    max-width: 480px;
+    margin: auto;
+    padding: 24px 18px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: var(--rose);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+section {
+    background: var(--cream);
+    border: 3px solid var(--pink);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 0 #edb6ce;
+}
+
+.garden {
+    background: #f9dce9;
+    text-align: center;
+    padding: 12px;
+    overflow: hidden;
+}
+
+#pixel-scene {
+    height: 150px;
+    background: linear-gradient(
+        to bottom,
+        #f9dce9 0%,
+        #ffeef5 65%,
+        #a6b87b 65%,
+        #879d60 100%
+    );
+    border-radius: 8px;
+    image-rendering: pixelated;
+}
+
+#garden-message {
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.timer-card {
+    text-align: center;
+}
+
+#session-status {
+    font-size: 14px;
+    color: var(--rose);
+}
+
+#timer {
+    font-size: clamp(48px, 14vw, 64px);
+    letter-spacing: 2px;
+    margin: 20px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.time-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+button {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--pink);
+    border: 2px solid #e5a4c1;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #d89ab7;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.time-options button.selected {
+    background: var(--pink-dark);
+    color: white;
+}
+
+#start-button {
+    width: 100%;
+    background: var(--pink-dark);
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+#pause-button,
+#end-button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+#end-button {
+    background: #f5dce4;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--pink);
+    border-radius: 8px;
+    background: #fff5f9;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--pink-dark);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--pink-dark);
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+h3 {
+    color: var(--rose);
+    font-size: 17px;
+    margin-top: 0;
+}
+
+#reply-status {
+    font-size: 11px;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.inventory {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.inventory div {
+    background: var(--pink-light);
+    border: 2px solid var(--pink);
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 22px;
+}
+
+.stats-card p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    font-size: 11px;
+    padding: 12px;
+    color: var(--rose);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* CHERRYCRAFT PIXEL ART */
+
+#pixel-scene {
+    height: 220px;
+    background-image: url("assets/garden.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    border: 3px solid #c58aab;
+    border-radius: 8px;
+}
+
+.garden {
+    background: #f8d4e5;
+    padding: 10px;
+}
+
+#garden-message {
+    font-weight: bold;
+    color: #a74b75;
+    padding: 6px;
+}
+
+
+
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.inventory .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 8px;
+    background: #f8d4e5;
+    border: 3px solid #d89ab7;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 3px #ffeaf3;
+}
+
+.inventory img {
+    width: 100%;
+    max-width: 90px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    image-rendering: pixelated;
+    border-radius: 3px;
+}
+
+.inventory .item span {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#flowers,
+#books,
+#apples {
+    font-size: 20px;
+    color: #a74b75;
+}
